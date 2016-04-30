@@ -3,6 +3,7 @@
 // Constants
 // ------------------------------------
 export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
+export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
 
 // ------------------------------------
 // Actions
@@ -19,6 +20,13 @@ export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
 export function increment (value: number = 1): Action {
   return {
     type: COUNTER_INCREMENT,
+    payload: value
+  }
+}
+
+export function decrement (value: number = 1): Action {
+  return {
+    type: COUNTER_DECREMENT,
     payload: value
   }
 }
@@ -51,7 +59,8 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]: (state: number, action: {payload: number}): number => state + action.payload
+  [COUNTER_INCREMENT]: (state: number, action: {payload: number}): number => state + action.payload,
+  [COUNTER_DECREMENT]: (state: number, action: {payload: number}): number => state - action.payload
 }
 
 // ------------------------------------

@@ -25,13 +25,18 @@ export const Counter = (props: Props) => (
     <button className='btn btn-default' onClick={props.doubleAsync}>
       Double (Async)
     </button>
+    {' '}
+    <button className={classes['decrement']} onClick={props.decrement}>
+      Decrement
+    </button>
   </div>
 )
 
 Counter.propTypes = {
   counter: React.PropTypes.number.isRequired,
   doubleAsync: React.PropTypes.func.isRequired,
-  increment: React.PropTypes.func.isRequired
+  increment: React.PropTypes.func.isRequired,
+  decrement: React.PropTypes.func.isRequired
 }
 
 export default Counter
