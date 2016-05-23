@@ -2,6 +2,8 @@ import React from 'react'
 import Header from '../../components/Header'
 import classes from './CoreLayout.scss'
 import '../../styles/core.scss'
+import Navigation from '../../components/Navigation'
+import routes from './../../routes'
 
 export const CoreLayout = ({ children }) => (
   <span>
@@ -24,46 +26,7 @@ export const CoreLayout = ({ children }) => (
       </header>
       <div className="inner-row">
         <section>
-          <div className="navigation">
-            <div className="nav-sqaure nav-sqaure-music">
-              <h1>Music</h1>
-              <ul>
-                <li>Playlist</li>
-                <li>Schedule</li>
-                <li>Two Week Archive</li>
-              </ul>
-            </div>
-            <div className="nav-sqaure nav-sqaure-articles">
-              <h1>Articles</h1>
-              <ul>
-                <li>Highlights</li>
-                <li>Music News</li>
-                <li>Sports</li>
-                <li>Public Affairs</li>
-              </ul>
-            </div>
-            <div className="nav-sqaure nav-sqaure-contact">
-              <h1>Contact</h1>
-              <ul>
-                <li>Excomm</li>
-                <li>Press</li>
-                <li>Tickets</li>
-                <li>Request Line</li>
-              </ul>
-            </div>
-            <div className="nav-sqaure nav-sqaure-about">
-              <h1>About Us</h1>
-              <ul>
-                <li>Mission</li>
-                <li>Getting Involved</li>
-                <li>Press</li>
-                <li>Alumni</li>
-              </ul>
-            </div>
-            <div className="nav-sqaure nav-sqaure-donate">
-              <h1>Donate <small>cart</small></h1>
-            </div>
-          </div>
+          <Navigation routes={routes} />
         </section>
         <section>
           <div className="iblock-kids">
